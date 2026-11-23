@@ -1,0 +1,1312 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>吃瓜轻量版 - 官方视频门户_轻量看片,热点短视频社区</title>
+<meta name="description" content="吃瓜轻量版官方网站，专注轻量、高清、原创的短视频内容社区，聚合热点影像、创作者动态与品牌故事，为移动端用户提供省流流畅的吃瓜视频体验。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8543f'/%3E%3Cpath d='M20 26h24v16a6 6 0 0 1-6 6H26a6 6 0 0 1-6-6z' fill='%23fff7ee'/%3E%3Cpath d='M20 22c0-4 5-7 12-7s12 3 12 7z' fill='%23ffd166'/%3E%3Ccircle cx='27' cy='35' r='2.4' fill='%23e8543f'/%3E%3Ccircle cx='37' cy='35' r='2.4' fill='%23e8543f'/%3E%3C/svg%3E">
+<style>
+:root{
+  --gq-bg:#fffaf4;
+  --gq-ink:#26201c;
+  --gq-ink-soft:#5c534d;
+  --gq-line:#ecdfd2;
+  --gq-card:#ffffff;
+  --gq-brand:#e8543f;
+  --gq-brand-deep:#c93a27;
+  --gq-amber:#f2a33c;
+  --gq-leaf:#3f7d5c;
+  --gq-cream:#fdf1e3;
+  --gq-shadow:0 10px 30px rgba(120,70,40,.10);
+  --gq-radius:16px;
+  --gq-head:112px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--gq-head)}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--gq-bg);
+  color:var(--gq-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+ul,ol{list-style:none}
+h1,h2,h3,h4{line-height:1.3;font-weight:800}
+.gq-wrap{width:min(1180px,92vw);margin:0 auto}
+.gq-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- 吸顶区 ---------- */
+.gq-sticky{position:sticky;top:0;z-index:60}
+.gq-announce{
+  background:linear-gradient(90deg,#c93a27,#e8543f 45%,#f2a33c);
+  color:#fff;
+  font-size:13px;
+}
+.gq-announce .gq-wrap{display:flex;align-items:center;gap:12px;padding:7px 0;min-height:36px}
+.gq-announce-tag{
+  flex:0 0 auto;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);
+  border-radius:999px;padding:1px 10px;font-weight:700;font-size:12px;letter-spacing:.04em;
+}
+.gq-announce-track{overflow:hidden;flex:1;min-width:0}
+.gq-announce-list{display:flex;gap:34px;white-space:nowrap;overflow-x:auto;scrollbar-width:none}
+.gq-announce-list::-webkit-scrollbar{display:none}
+.gq-announce-list li{flex:0 0 auto;display:flex;align-items:center;gap:8px}
+.gq-announce-list li::before{content:"";width:5px;height:5px;border-radius:50%;background:#ffe0a8;flex:0 0 auto}
+.gq-announce-list b{color:#fff3d6}
+
+.gq-header{
+  background:rgba(255,250,244,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--gq-line);
+}
+.gq-header .gq-wrap{display:flex;align-items:center;gap:18px;min-height:74px;flex-wrap:wrap;padding:10px 0}
+.gq-logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:.01em;flex:0 0 auto}
+.gq-logo-mark{
+  width:40px;height:40px;border-radius:12px;background:var(--gq-brand);
+  display:grid;place-items:center;color:#fff;font-size:19px;box-shadow:0 6px 14px rgba(232,84,63,.32)
+}
+.gq-logo small{display:block;font-size:11px;font-weight:600;color:var(--gq-ink-soft);letter-spacing:.18em}
+.gq-nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:6px}
+.gq-nav a{
+  padding:7px 12px;border-radius:999px;font-size:14.5px;font-weight:600;color:var(--gq-ink-soft);
+  transition:background .18s,color .18s
+}
+.gq-nav a:hover,.gq-nav a:focus-visible{background:var(--gq-cream);color:var(--gq-brand-deep)}
+.gq-head-tools{display:flex;align-items:center;gap:10px;margin-left:auto}
+.gq-search{position:relative;display:flex;align-items:center}
+.gq-search input{
+  width:210px;padding:9px 74px 9px 36px;border-radius:999px;border:1px solid var(--gq-line);
+  background:#fff;font-size:13.5px;color:var(--gq-ink);outline:none;transition:border .18s,box-shadow .18s
+}
+.gq-search input:focus{border-color:var(--gq-brand);box-shadow:0 0 0 3px rgba(232,84,63,.14)}
+.gq-search-ico{position:absolute;left:12px;font-size:14px;color:var(--gq-ink-soft);pointer-events:none}
+.gq-search-btn{
+  position:absolute;right:5px;top:50%;transform:translateY(-50%);
+  background:var(--gq-brand);color:#fff;border-radius:999px;padding:5px 13px;font-size:12.5px;font-weight:700
+}
+.gq-search-btn:hover{background:var(--gq-brand-deep)}
+.gq-search-hint{
+  position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;border:1px solid var(--gq-line);
+  border-radius:12px;box-shadow:var(--gq-shadow);padding:8px;font-size:13px;color:var(--gq-ink-soft);
+  display:none;z-index:70
+}
+.gq-search-hint.gq-on{display:block}
+.gq-search-hint b{color:var(--gq-brand-deep)}
+.gq-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px;transition:transform .16s,box-shadow .16s,background .16s
+}
+.gq-btn:hover{transform:translateY(-1px)}
+.gq-btn-primary{background:var(--gq-brand);color:#fff;box-shadow:0 8px 18px rgba(232,84,63,.28)}
+.gq-btn-primary:hover{background:var(--gq-brand-deep)}
+.gq-btn-ghost{background:#fff;color:var(--gq-brand-deep);border:1px solid var(--gq-line)}
+.gq-btn-ghost:hover{border-color:var(--gq-brand)}
+.gq-btn-dark{background:var(--gq-ink);color:#fff}
+.gq-btn-dark:hover{background:#3a312b}
+.gq-nav-toggle{display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--gq-line);background:#fff;font-size:18px}
+
+/* ---------- 首屏 ---------- */
+.gq-hero{padding:40px 0 20px}
+.gq-hero-grid{display:grid;grid-template-columns:6fr 4fr;gap:38px;align-items:center}
+.gq-hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;background:var(--gq-cream);color:var(--gq-brand-deep);
+  border:1px solid #f6d9c4;border-radius:999px;padding:5px 14px;font-size:12.5px;font-weight:700;letter-spacing:.04em
+}
+.gq-hero h1{
+  font-size:clamp(34px,4.6vw,58px);letter-spacing:-.01em;margin:18px 0 14px;line-height:1.18
+}
+.gq-hero h1 em{font-style:normal;color:var(--gq-brand);position:relative}
+.gq-hero-lead{font-size:16.5px;color:var(--gq-ink-soft);max-width:34em}
+.gq-hero-desc{margin-top:16px;font-size:14.6px;color:var(--gq-ink-soft);max-width:36em}
+.gq-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.gq-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+.gq-stat{
+  background:#fff;border:1px solid var(--gq-line);border-radius:14px;padding:14px 16px;
+  box-shadow:0 4px 14px rgba(150,100,70,.06)
+}
+.gq-stat b{display:block;font-size:23px;color:var(--gq-brand-deep);letter-spacing:-.02em}
+.gq-stat span{font-size:12.5px;color:var(--gq-ink-soft)}
+.gq-hero-art{position:relative}
+.gq-hero-art-frame{
+  border-radius:22px;overflow:hidden;border:6px solid #fff;box-shadow:var(--gq-shadow);background:#fff
+}
+.gq-hero-art-frame img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.gq-hero-badge{
+  position:absolute;left:-14px;bottom:22px;background:#fff;border-radius:14px;padding:10px 16px;
+  box-shadow:var(--gq-shadow);border:1px solid var(--gq-line);font-size:13px;font-weight:700
+}
+.gq-hero-badge span{color:var(--gq-brand)}
+.gq-hero-float{
+  position:absolute;right:-10px;top:18px;background:var(--gq-ink);color:#fff;border-radius:12px;
+  padding:8px 14px;font-size:12.5px;font-weight:700;box-shadow:0 8px 20px rgba(38,32,28,.28)
+}
+
+/* ---------- 通用 section ---------- */
+.gq-section{padding:56px 0}
+.gq-section.gq-tint{background:linear-gradient(180deg,#fdf3e8,#fffaf4)}
+.gq-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.gq-sec-kicker{font-size:12.5px;font-weight:800;letter-spacing:.2em;color:var(--gq-brand);text-transform:uppercase}
+.gq-sec-head h2{font-size:clamp(24px,2.8vw,33px);margin-top:6px}
+.gq-sec-head p{color:var(--gq-ink-soft);font-size:14.5px;max-width:44em;margin-top:8px}
+.gq-sec-link{font-size:14px;font-weight:700;color:var(--gq-brand-deep);white-space:nowrap}
+.gq-sec-link:hover{text-decoration:underline}
+
+/* 焦点内容 */
+.gq-focus-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:stretch}
+.gq-focus-main{
+  background:#fff;border-radius:var(--gq-radius);overflow:hidden;border:1px solid var(--gq-line);
+  box-shadow:var(--gq-shadow);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s
+}
+.gq-focus-main:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(120,70,40,.16)}
+.gq-focus-main img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.gq-focus-body{padding:20px 22px 22px}
+.gq-tag-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:10px}
+.gq-tag{
+  font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:999px;
+  background:var(--gq-cream);color:var(--gq-brand-deep);border:1px solid #f6dcc7
+}
+.gq-tag.gq-tag-leaf{background:#eaf4ee;color:#2f6a4c;border-color:#cfe6d8}
+.gq-tag.gq-tag-amber{background:#fef4e1;color:#a76a10;border-color:#f3dfb6}
+.gq-focus-main h3{font-size:21px;margin-bottom:8px}
+.gq-focus-body p{font-size:14px;color:var(--gq-ink-soft)}
+.gq-meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;font-size:12.5px;color:var(--gq-ink-soft)}
+.gq-meta b{color:var(--gq-ink);font-weight:700}
+.gq-cards-side{display:grid;grid-template-columns:1fr;gap:16px}
+.gq-side-card{
+  background:#fff;border:1px solid var(--gq-line);border-radius:14px;padding:16px 18px;
+  display:flex;gap:14px;box-shadow:0 4px 14px rgba(150,100,70,.06);transition:transform .2s,box-shadow .2s
+}
+.gq-side-card:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(120,70,40,.13)}
+.gq-side-thumb{flex:0 0 92px;border-radius:10px;overflow:hidden;background:var(--gq-cream)}
+.gq-side-thumb img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover}
+.gq-side-card h3{font-size:15.5px;margin-bottom:4px}
+.gq-side-card p{font-size:13px;color:var(--gq-ink-soft)}
+
+/* 热门视频流（单列图文） */
+.gq-stream{display:grid;grid-template-columns:1fr;gap:0;background:#fff;border:1px solid var(--gq-line);border-radius:var(--gq-radius);overflow:hidden;box-shadow:var(--gq-shadow)}
+.gq-stream-item{display:grid;grid-template-columns:150px 1fr auto;gap:20px;padding:20px 22px;border-bottom:1px solid var(--gq-line);align-items:center;transition:background .18s}
+.gq-stream-item:last-child{border-bottom:0}
+.gq-stream-item:hover{background:#fffbf5}
+.gq-stream-item img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px}
+.gq-stream-item h3{font-size:17px;margin-bottom:6px}
+.gq-stream-item p{font-size:13.4px;color:var(--gq-ink-soft)}
+.gq-stream-actions{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.gq-like{
+  display:inline-flex;align-items:center;gap:6px;border:1px solid var(--gq-line);background:#fff;
+  border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;color:var(--gq-ink-soft);transition:all .16s
+}
+.gq-like:hover{border-color:var(--gq-brand);color:var(--gq-brand-deep)}
+.gq-like.gq-liked{background:#fdece8;border-color:var(--gq-brand);color:var(--gq-brand-deep)}
+.gq-fav{
+  display:inline-flex;align-items:center;gap:6px;border:1px solid var(--gq-line);background:#fff;
+  border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;color:var(--gq-ink-soft);transition:all .16s
+}
+.gq-fav.gq-faved{background:#fef6e2;border-color:var(--gq-amber);color:#9a6510}
+.gq-play{
+  display:inline-flex;align-items:center;gap:6px;background:var(--gq-ink);color:#fff;border-radius:999px;
+  padding:6px 14px;font-size:13px;font-weight:700
+}
+.gq-play:hover{background:var(--gq-brand-deep)}
+
+/* 专题 */
+.gq-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.gq-topic{
+  background:#fff;border:1px solid var(--gq-line);border-radius:var(--gq-radius);overflow:hidden;
+  display:flex;flex-direction:column;box-shadow:0 6px 18px rgba(150,100,70,.07);transition:transform .2s,box-shadow .2s
+}
+.gq-topic:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(120,70,40,.14)}
+.gq-topic img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.gq-topic-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.gq-topic h3{font-size:18px}
+.gq-topic p{font-size:13.5px;color:var(--gq-ink-soft)}
+.gq-topic ul{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--gq-ink-soft);margin-top:auto}
+.gq-topic ul li{display:flex;gap:8px}
+.gq-topic ul li::before{content:"▸";color:var(--gq-brand)}
+.gq-status{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:800;color:var(--gq-leaf)}
+.gq-status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gq-leaf)}
+
+/* 创作者双列 */
+.gq-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.gq-author{
+  background:#fff;border:1px solid var(--gq-line);border-radius:var(--gq-radius);padding:20px 22px;
+  display:flex;gap:16px;box-shadow:0 6px 18px rgba(150,100,70,.06);transition:transform .2s,box-shadow .2s
+}
+.gq-author:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(120,70,40,.13)}
+.gq-avatar{
+  flex:0 0 62px;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;
+  font-weight:900;font-size:22px;color:#fff;letter-spacing:0;user-select:none
+}
+.gq-avatar.gq-av-1{background:linear-gradient(135deg,#e8543f,#f2a33c)}
+.gq-avatar.gq-av-2{background:linear-gradient(135deg,#3f7d5c,#79b58c)}
+.gq-avatar.gq-av-3{background:linear-gradient(135deg,#c93a27,#e86f5e)}
+.gq-avatar.gq-av-4{background:linear-gradient(135deg,#5a6b8c,#8fa3c4)}
+.gq-avatar.gq-av-5{background:linear-gradient(135deg,#a76a10,#f2bf6c)}
+.gq-avatar.gq-av-6{background:linear-gradient(135deg,#7a4d8c,#b48cc4)}
+.gq-author-main h3{font-size:17px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.gq-author-role{font-size:11.5px;font-weight:700;color:var(--gq-brand-deep);background:var(--gq-cream);border-radius:999px;padding:1px 9px}
+.gq-author-main p{font-size:13.3px;color:var(--gq-ink-soft);margin-top:6px}
+.gq-author-data{display:flex;gap:16px;margin-top:10px;font-size:12.5px;color:var(--gq-ink-soft);flex-wrap:wrap}
+.gq-author-data b{color:var(--gq-ink)}
+.gq-author-more{
+  margin-top:10px;font-size:12.5px;font-weight:700;color:var(--gq-brand-deep);
+  border:1px solid var(--gq-line);border-radius:999px;padding:4px 12px;background:#fff;transition:all .16s
+}
+.gq-author-more:hover{border-color:var(--gq-brand);background:var(--gq-cream)}
+
+/* 评价双列 */
+.gq-reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.gq-review{
+  background:#fff;border:1px solid var(--gq-line);border-radius:14px;padding:18px 20px;position:relative;
+  box-shadow:0 4px 14px rgba(150,100,70,.05)
+}
+.gq-review::before{content:"“";position:absolute;top:6px;right:16px;font-size:42px;color:#f3ddcb;font-family:Georgia,serif;line-height:1}
+.gq-review-stars{color:var(--gq-amber);font-size:13px;letter-spacing:2px}
+.gq-review p{font-size:13.8px;margin:8px 0 12px;color:var(--gq-ink)}
+.gq-review-by{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--gq-ink-soft)}
+.gq-review-by .gq-avatar{width:34px;height:34px;flex:0 0 34px;font-size:13px}
+.gq-review-by b{color:var(--gq-ink)}
+
+/* 解析长文 */
+.gq-article{background:#fff;border:1px solid var(--gq-line);border-radius:var(--gq-radius);padding:34px 38px;box-shadow:var(--gq-shadow)}
+.gq-article h2{font-size:clamp(23px,2.6vw,30px);margin-bottom:8px}
+.gq-article .gq-sec-kicker{margin-bottom:0}
+.gq-article h3{font-size:18px;margin:26px 0 8px;padding-left:12px;border-left:4px solid var(--gq-brand);line-height:1.4}
+.gq-article p{font-size:14.8px;color:#413933;margin-bottom:12px}
+.gq-article strong{color:var(--gq-brand-deep)}
+.gq-quote-box{
+  background:var(--gq-cream);border-radius:12px;padding:16px 20px;margin:16px 0;
+  font-size:14px;color:#7a4a2e;border-left:4px solid var(--gq-amber)
+}
+
+/* 企业动态 */
+.gq-news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.gq-news-card{background:#fff;border:1px solid var(--gq-line);border-radius:14px;padding:20px;box-shadow:0 4px 14px rgba(150,100,70,.05);transition:transform .2s,box-shadow .2s}
+.gq-news-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(120,70,40,.12)}
+.gq-news-date{font-size:12px;font-weight:800;color:var(--gq-brand);letter-spacing:.06em}
+.gq-news-card h3{font-size:16.5px;margin:8px 0 6px}
+.gq-news-card p{font-size:13.3px;color:var(--gq-ink-soft)}
+
+/* 合作墙 */
+.gq-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.gq-partner{
+  background:#fff;border:1px dashed #e6d3c1;border-radius:14px;padding:18px 14px;text-align:center;
+  font-weight:800;font-size:14.5px;color:#6b5c50;transition:all .18s
+}
+.gq-partner span{display:block;font-size:11.5px;font-weight:600;color:var(--gq-ink-soft);margin-top:4px;letter-spacing:.04em}
+.gq-partner:hover{color:var(--gq-brand-deep);border-color:var(--gq-brand);background:#fffaf3}
+
+/* FAQ */
+.gq-faq{display:flex;flex-direction:column;gap:12px}
+.gq-faq details{
+  background:#fff;border:1px solid var(--gq-line);border-radius:12px;padding:0 18px;
+  transition:border-color .18s
+}
+.gq-faq details[open]{border-color:var(--gq-brand);box-shadow:0 6px 18px rgba(232,84,63,.08)}
+.gq-faq summary{
+  cursor:pointer;list-style:none;font-weight:700;font-size:15px;padding:15px 0;display:flex;
+  justify-content:space-between;align-items:center;gap:14px
+}
+.gq-faq summary::-webkit-details-marker{display:none}
+.gq-faq summary::after{
+  content:"+";font-size:20px;font-weight:400;color:var(--gq-brand);flex:0 0 auto;transition:transform .18s
+}
+.gq-faq details[open] summary::after{transform:rotate(45deg)}
+.gq-faq details p{font-size:13.8px;color:var(--gq-ink-soft);padding:0 0 16px}
+
+/* CTA 投稿 */
+.gq-cta{
+  background:linear-gradient(120deg,#2b221d,#3d2e24 55%,#5a3a28);
+  color:#fff;border-radius:22px;padding:38px 40px;display:flex;align-items:center;justify-content:space-between;
+  gap:26px;flex-wrap:wrap;box-shadow:0 20px 50px rgba(60,35,20,.28)
+}
+.gq-cta h2{font-size:clamp(21px,2.6vw,28px);margin-bottom:8px}
+.gq-cta p{font-size:14px;color:#e8d8ca;max-width:38em}
+.gq-cta .gq-btn-primary{background:var(--gq-amber);color:#3a2410;box-shadow:0 8px 20px rgba(242,163,60,.3)}
+.gq-cta .gq-btn-primary:hover{background:#ffc266}
+.gq-cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* 页脚 */
+.gq-footer{background:#26201c;color:#d9ccc0;padding:52px 0 26px;margin-top:56px}
+.gq-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:32px}
+.gq-footer h3{font-size:14px;color:#fff;margin-bottom:14px;letter-spacing:.06em}
+.gq-footer p,.gq-footer li{font-size:13px;line-height:2;color:#b9a99a}
+.gq-footer a:hover{color:var(--gq-amber)}
+.gq-foot-logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px;color:#fff;margin-bottom:12px}
+.gq-foot-logo .gq-logo-mark{width:34px;height:34px;font-size:16px;border-radius:10px}
+.gq-foot-bottom{
+  margin-top:34px;padding-top:20px;border-top:1px solid #3b322c;display:flex;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;font-size:12.3px;color:#93857a
+}
+.gq-foot-badges{display:flex;gap:10px;flex-wrap:wrap}
+.gq-foot-badges span{border:1px solid #4a3f37;border-radius:999px;padding:2px 10px;font-size:11.5px}
+
+/* 回到顶部 */
+.gq-top{
+  position:fixed;right:22px;bottom:24px;width:46px;height:46px;border-radius:50%;
+  background:var(--gq-brand);color:#fff;font-size:18px;display:grid;place-items:center;
+  box-shadow:0 10px 24px rgba(232,84,63,.4);opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:all .24s;z-index:80
+}
+.gq-top.gq-on{opacity:1;visibility:visible;transform:none}
+
+/* Toast */
+.gq-toast{
+  position:fixed;left:50%;bottom:36px;transform:translate(-50%,20px);background:#26201c;color:#fff;
+  padding:11px 22px;border-radius:999px;font-size:13.5px;font-weight:600;opacity:0;visibility:hidden;
+  transition:all .24s;z-index:120;box-shadow:0 14px 34px rgba(0,0,0,.28);max-width:90vw;text-align:center
+}
+.gq-toast.gq-on{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+/* 弹窗 */
+.gq-modal{
+  position:fixed;inset:0;background:rgba(30,22,18,.55);display:none;place-items:center;z-index:110;padding:20px
+}
+.gq-modal.gq-on{display:grid}
+.gq-modal-box{
+  background:#fff;border-radius:18px;max-width:480px;width:100%;padding:26px 28px;position:relative;
+  box-shadow:0 30px 70px rgba(0,0,0,.3);max-height:86vh;overflow:auto
+}
+.gq-modal-box h3{font-size:20px;margin-bottom:8px}
+.gq-modal-box p{font-size:13.8px;color:var(--gq-ink-soft);margin-bottom:14px}
+.gq-modal-close{
+  position:absolute;top:12px;right:14px;width:32px;height:32px;border-radius:50%;background:var(--gq-cream);
+  color:var(--gq-ink-soft);font-size:16px;display:grid;place-items:center
+}
+.gq-modal-close:hover{background:#f6dcc7;color:var(--gq-brand-deep)}
+.gq-field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.gq-field label{font-size:12.8px;font-weight:700;color:var(--gq-ink-soft)}
+.gq-field input,.gq-field textarea{
+  border:1px solid var(--gq-line);border-radius:10px;padding:9px 12px;font:inherit;font-size:13.6px;
+  outline:none;transition:border .16s,box-shadow .16s;background:#fffaf5
+}
+.gq-field input:focus,.gq-field textarea:focus{border-color:var(--gq-brand);box-shadow:0 0 0 3px rgba(232,84,63,.13)}
+.gq-feed-list{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.gq-feed-opt{
+  display:flex;align-items:center;gap:10px;border:1px solid var(--gq-line);border-radius:10px;
+  padding:9px 12px;font-size:13.5px;cursor:pointer
+}
+.gq-feed-opt:hover{border-color:var(--gq-brand)}
+
+/* 响应式 */
+@media (max-width:1020px){
+  .gq-hero-grid{grid-template-columns:1fr}
+  .gq-hero-art{max-width:460px;margin:0 auto}
+  .gq-focus-grid{grid-template-columns:1fr}
+  .gq-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gq-news{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gq-partners{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .gq-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  :root{--gq-head:104px}
+  .gq-header .gq-wrap{min-height:66px;gap:10px}
+  .gq-nav-toggle{display:grid;place-items:center;margin-left:auto;order:3}
+  .gq-head-tools{order:4;margin-left:0;width:100%;justify-content:space-between}
+  .gq-search{flex:1}
+  .gq-search input{width:100%}
+  .gq-nav{
+    display:none;order:5;width:100%;flex-direction:column;gap:2px;padding:8px 0 10px;
+    border-top:1px solid var(--gq-line);margin-left:0
+  }
+  .gq-nav.gq-open{display:flex}
+  .gq-nav a{padding:10px 12px;border-radius:10px}
+  .gq-authors{grid-template-columns:1fr}
+  .gq-reviews{grid-template-columns:1fr}
+  .gq-stream-item{grid-template-columns:110px 1fr;gap:14px}
+  .gq-stream-actions{flex-direction:row;align-items:center;grid-column:1/-1;flex-wrap:wrap}
+  .gq-article{padding:24px 20px}
+  .gq-cta{padding:28px 24px}
+}
+@media (max-width:640px){
+  .gq-hero-stats{grid-template-columns:1fr}
+  .gq-topic-grid,.gq-news,.gq-partners{grid-template-columns:1fr}
+  .gq-footer-grid{grid-template-columns:1fr}
+  .gq-announce .gq-wrap{padding:6px 0}
+  .gq-announce-tag{display:none}
+  .gq-focus-body{padding:18px}
+  .gq-stream-item{padding:16px}
+  .gq-stream-item img{aspect-ratio:4/3}
+  .gq-toast{bottom:22px;font-size:12.8px}
+  .gq-top{right:14px;bottom:16px;width:42px;height:42px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== 吸顶：公告条 + 页头 ===== -->
+<div class="gq-sticky">
+  <div class="gq-announce" aria-label="官方更新公告">
+    <div class="gq-wrap">
+      <span class="gq-announce-tag">官方发布</span>
+      <div class="gq-announce-track">
+        <ul class="gq-announce-list">
+          <li><b>新增</b>「十分钟吃瓜简讯」每日 08:30 准时更新，单条不超 3 分钟</li>
+          <li><b>上线</b>吃瓜轻量版 4.2 省流播放模式，同清晰度流量下降约 38%</li>
+          <li><b>招募</b>第十二期原创影像计划开启报名，11 月 30 日截止</li>
+          <li><b>更新</b>创作者后台支持深色界面与批量上传下载</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <header class="gq-header">
+    <div class="gq-wrap">
+      <a class="gq-logo" href="#gq-top" aria-label="吃瓜轻量版官网首页">
+        <span class="gq-logo-mark" aria-hidden="true">瓜</span>
+        <span>吃瓜轻量版<small>LIGHT MELON · 官方视频门户</small></span>
+      </a>
+      <nav class="gq-nav" id="gq-nav" aria-label="主导航">
+        <a href="#gq-focus">焦点推荐</a>
+        <a href="#gq-stream">热门视频</a>
+        <a href="#gq-topics">专题企划</a>
+        <a href="#gq-authors">创作者</a>
+        <a href="#gq-article">品牌解析</a>
+        <a href="#gq-reviews">社区口碑</a>
+        <a href="#gq-faq">帮助中心</a>
+      </nav>
+      <button class="gq-nav-toggle" id="gq-nav-toggle" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+      <div class="gq-head-tools">
+        <div class="gq-search">
+          <span class="gq-search-ico" aria-hidden="true">🔍</span>
+          <input id="gq-search-input" type="search" placeholder="搜索吃瓜视频 / 创作者" aria-label="站内搜索">
+          <button class="gq-search-btn" id="gq-search-btn">搜索</button>
+          <div class="gq-search-hint" id="gq-search-hint" role="status"></div>
+        </div>
+        <button class="gq-btn gq-btn-primary" id="gq-submit-btn">投稿入口</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="gq-top">
+
+  <!-- ===== S2 首屏 ===== -->
+  <section class="gq-hero">
+    <div class="gq-wrap gq-hero-grid">
+      <div>
+        <span class="gq-hero-eyebrow">官方网站 · 轻量短视频社区 · 持续运营中</span>
+        <h1>吃瓜轻量版</h1>
+        <p class="gq-hero-lead">看得轻，聊得真。一个把热点、故事与社区温度压缩进碎片时间的高清短视频<strong>官网</strong>平台。</p>
+        <p class="gq-hero-desc">吃瓜轻量版是深耕移动端影像内容的垂直品牌，专注为创作者与品牌搭建高品质内容生态。我们以轻量加载、省流播放、清晰叙事为产品底色，坚持原创与正版授权，让每一次打开都值得信赖。</p>
+        <div class="gq-hero-actions">
+          <a class="gq-btn gq-btn-primary" href="#gq-stream">观看热门视频</a>
+          <a class="gq-btn gq-btn-ghost" href="#gq-topics">查看专题企划</a>
+          <a class="gq-btn gq-btn-ghost" href="#gq-authors">认识创作者</a>
+        </div>
+        <div class="gq-hero-stats">
+          <div class="gq-stat"><b>1,286 万</b><span>月度活跃观众</span></div>
+          <div class="gq-stat"><b>2,940 位</b><span>认证内容创作者</span></div>
+          <div class="gq-stat"><b>98.6%</b><span>播放流畅度口碑好评</span></div>
+        </div>
+      </div>
+      <div class="gq-hero-art">
+        <div class="gq-hero-art-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 600'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e8543f'/%3E%3Cstop offset='0.55' stop-color='%23f2a33c'/%3E%3Cstop offset='1' stop-color='%23ffd9a0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='600' fill='url(%23g1)'/%3E%3Ccircle cx='120' cy='120' r='150' fill='%23ffffff' opacity='0.16'/%3E%3Ccircle cx='400' cy='470' r='190' fill='%23c93a27' opacity='0.3'/%3E%3Crect x='60' y='210' width='360' height='230' rx='26' fill='%2326201c' opacity='0.86'/%3E%3Cpath d='M225 280 L305 325 L225 370 Z' fill='%23ffd166'/%3E%3Crect x='60' y='472' width='196' height='22' rx='11' fill='%23fff7ee' opacity='0.9'/%3E%3Crect x='60' y='510' width='126' height='16' rx='8' fill='%23fff7ee' opacity='0.55'/%3E%3Cpath d='M310 168c40 0 72-30 72-72 0 0-74 6-78 58' fill='%233f7d5c' opacity='0.9'/%3E%3Cpath d='M150 96c-32-22-76-12-76-12s8 44 42 56' fill='%23ffffff' opacity='0.55'/%3E%3C/svg%3E" width="480" height="600" alt="吃瓜轻量版首屏主视觉：播放窗口与瓜藤图形组合的暖橙海报">
+        </div>
+        <div class="gq-hero-badge">今日更新 <span>86</span> 条轻量视频</div>
+        <div class="gq-hero-float">省流模式 · 已开启</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== S3 焦点内容 ===== -->
+  <section class="gq-section" id="gq-focus">
+    <div class="gq-wrap">
+      <div class="gq-sec-head">
+        <div>
+          <div class="gq-sec-kicker">Focus · 焦点推荐</div>
+          <h2>今天值得先看的三件事</h2>
+          <p>编辑部从吃瓜轻量版当日更新的视频中，挑出信息密度最高、讨论最真实的三条焦点内容，附完整数据与观看入口。</p>
+        </div>
+        <a class="gq-sec-link" href="#gq-stream">查看全部热门 →</a>
+      </div>
+
+      <div class="gq-focus-grid">
+        <article class="gq-focus-main">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%2326201c'/%3E%3Cstop offset='1' stop-color='%23c93a27'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23g2)'/%3E%3Crect x='48' y='60' width='200' height='16' rx='8' fill='%23ffd166'/%3E%3Crect x='48' y='96' width='120' height='12' rx='6' fill='%23fff7ee' opacity='0.7'/%3E%3Ccircle cx='470' cy='180' r='112' fill='%23f2a33c' opacity='0.85'/%3E%3Ccircle cx='470' cy='180' r='64' fill='%2326201c'/%3E%3Cpath d='M452 150 L504 180 L452 210 Z' fill='%23ffd166'/%3E%3Crect x='48' y='272' width='264' height='14' rx='7' fill='%23fff7ee' opacity='0.45'/%3E%3Crect x='48' y='300' width='180' height='10' rx='5' fill='%23fff7ee' opacity='0.3'/%3E%3C/svg%3E" width="640" height="360" alt="焦点视频封面：深红渐变背景与播放按钮，呈现十分钟吃瓜简讯">
+          <div class="gq-focus-body">
+            <div class="gq-tag-row">
+              <span class="gq-tag">今日头条</span>
+              <span class="gq-tag gq-tag-amber">深度测评</span>
+              <span class="gq-tag gq-tag-leaf">原创</span>
+            </div>
+            <h3>十分钟吃瓜简讯：一条热搜如何被还原成完整链路</h3>
+            <p>把当天最杂的讨论压缩成一条 9 分 40 秒的轻量视频，从信息源、传播节点到反转节点逐步梳理，标注每一条争议的出处。评论区同步开放投票，观众可以投出自己认为最可信的时间线版本。</p>
+            <div class="gq-meta">
+              <span>创作者 <b>@简讯老周</b></span>
+              <span>播放 <b>142.8 万</b></span>
+              <span>点赞 <b id="gq-focus-like">3.6 万</b></span>
+              <span>收藏 <b>1.2 万</b></span>
+            </div>
+            <div class="gq-hero-actions" style="margin-top:16px">
+              <button class="gq-like" data-like-target="gq-focus-like">👍 点赞</button>
+              <button class="gq-fav">☆ 收藏</button>
+              <button class="gq-play" data-copy-title="十分钟吃瓜简讯：一条热搜如何被还原成完整链路">▶ 立即观看</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="gq-cards-side">
+          <article class="gq-side-card">
+            <div class="gq-side-thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%233f7d5c'/%3E%3Ccircle cx='70' cy='72' r='40' fill='%23ffd166' opacity='0.9'/%3E%3Crect x='40' y='128' width='122' height='14' rx='7' fill='%23eaf4ee' opacity='0.9'/%3E%3Crect x='40' y='152' width='84' height='10' rx='5' fill='%23eaf4ee' opacity='0.6'/%3E%3C/svg%3E" width="200" height="200" alt="热门视频缩略图：绿色背景与人物圆形图标，对应社区生活记录">
+            </div>
+            <div>
+              <div class="gq-tag-row"><span class="gq-tag gq-tag-leaf">日常记录</span></div>
+              <h3>在县城拍了一年视频，我学会了不急着下结论</h3>
+              <p>@山野小满 · 播放 88.4 万 · 收藏 2.1 万</p>
+            </div>
+          </article>
+          <article class="gq-side-card">
+            <div class="gq-side-thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%235a6b8c'/%3E%3Crect x='30' y='40' width='140' height='90' rx='10' fill='%23e8eef8' opacity='0.92'/%3E%3Crect x='46' y='58' width='74' height='10' rx='5' fill='%235a6b8c'/%3E%3Crect x='46' y='78' width='108' height='8' rx='4' fill='%235a6b8c' opacity='0.6'/%3E%3Crect x='46' y='96' width='88' height='8' rx='4' fill='%235a6b8c' opacity='0.45'/%3E%3Ccircle cx='150' cy='156' r='26' fill='%23f2a33c'/%3E%3C/svg%3E" width="200" height="200" alt="热门视频缩略图：蓝灰界面与文档图形，对应行业观察栏目">
+            </div>
+            <div>
+              <div class="gq-tag-row"><span class="gq-tag">行业观察</span></div>
+              <h3>轻量视频为什么更适合通勤？我们统计了 30 万次观看</h3>
+              <p>@数据派阿澄 · 播放 76.2 万 · 点赞 1.9 万</p>
+            </div>
+          </article>
+          <article class="gq-side-card">
+            <div class="gq-side-thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f2a33c'/%3E%3Cpath d='M40 140 L96 60 L152 140 Z' fill='%23fff7ee' opacity='0.92'/%3E%3Ccircle cx='96' cy='140' r='42' fill='%2326201c' opacity='0.18'/%3E%3C/svg%3E" width="200" height="200" alt="热门视频缩略图：琥珀色三角山形，对应户外与人物访谈内容">
+            </div>
+            <div>
+              <div class="gq-tag-row"><span class="gq-tag gq-tag-amber">人物访谈</span></div>
+              <h3>和三位剪辑师聊了聊：一段视频如何做到两分钟讲完</h3>
+              <p>@剪辑室灯还亮 · 播放 64.9 万 · 收藏 1.4 万</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== S3 热门视频流 ===== -->
+  <section class="gq-section gq-tint" id="gq-stream">
+    <div class="gq-wrap">
+      <div class="gq-sec-head">
+        <div>
+          <div class="gq-sec-kicker">Hot · 热门视频</div>
+          <h2>社区正在看的轻量视频</h2>
+          <p>覆盖日常记录、实用技巧、深度测评与城市探索，每一条都支持点赞、收藏与复制分享。点击条目右侧按钮即可实时互动。</p>
+        </div>
+        <a class="gq-sec-link" href="#gq-topics">同题专题 →</a>
+      </div>
+
+      <div class="gq-stream">
+        <article class="gq-stream-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23fdf1e3'/%3E%3Ccircle cx='80' cy='100' r='54' fill='%23e8543f'/%3E%3Crect x='156' y='58' width='130' height='16' rx='8' fill='%2326201c' opacity='0.8'/%3E%3Crect x='156' y='88' width='104' height='12' rx='6' fill='%2326201c' opacity='0.5'/%3E%3Crect x='156' y='114' width='120' height='12' rx='6' fill='%2326201c' opacity='0.32'/%3E%3C/svg%3E" width="320" height="200" alt="热门视频封面：砖红圆形与标题条，对应手机省流播放设置教程">
+          <div>
+            <div class="gq-tag-row"><span class="gq-tag">教程干货</span><span class="gq-tag gq-tag-leaf">省流</span></div>
+            <h3>三分钟设置：让吃瓜轻量版在你手机上更省流</h3>
+            <p>从画质档位、预加载空间到后台播放逐项演示，实测同一条 8 分钟视频在四档清晰度下的流量差异，并给出通勤、居家两种使用建议。</p>
+            <div class="gq-meta"><span>@设置控小鹿</span><span>播放 96.3 万</span><span>点赞 <b id="gq-like-1">2.4 万</b></span></div>
+          </div>
+          <div class="gq-stream-actions">
+            <button class="gq-like" data-like-target="gq-like-1">👍 点赞</button>
+            <button class="gq-fav">☆ 收藏</button>
+            <button class="gq-play" data-copy-title="三分钟设置：让吃瓜轻量版在你手机上更省流">▶ 播放</button>
+          </div>
+        </article>
+
+        <article class="gq-stream-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%233f7d5c'/%3E%3Cpath d='M0 160 Q80 110 160 150 T320 130 V200 H0 Z' fill='%23eaf4ee' opacity='0.5'/%3E%3Ccircle cx='250' cy='60' r='34' fill='%23ffd166'/%3E%3Crect x='36' y='52' width='120' height='14' rx='7' fill='%23eaf4ee' opacity='0.9'/%3E%3Crect x='36' y='82' width='88' height='10' rx='5' fill='%23eaf4ee' opacity='0.55'/%3E%3C/svg%3E" width="320" height="200" alt="热门视频封面：绿色山丘与太阳，对应城市探索影像">
+          <div>
+            <div class="gq-tag-row"><span class="gq-tag gq-tag-leaf">城市探索</span><span class="gq-tag">在地文化</span></div>
+            <h3>沿着老菜场走了两万步，拍下城市最早的烟火</h3>
+            <p>清晨五点半开摊，七点最热闹，九点后逐渐收市。用一天时间记录三个摊主的节奏，也记录下这座城市最稳定的生活秩序。</p>
+            <div class="gq-meta"><span>@山野小满</span><span>播放 88.4 万</span><span>点赞 <b id="gq-like-2">1.8 万</b></span></div>
+          </div>
+          <div class="gq-stream-actions">
+            <button class="gq-like" data-like-target="gq-like-2">👍 点赞</button>
+            <button class="gq-fav">☆ 收藏</button>
+            <button class="gq-play" data-copy-title="沿着老菜场走了两万步，拍下城市最早的烟火">▶ 播放</button>
+          </div>
+        </article>
+
+        <article class="gq-stream-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%235a6b8c'/%3E%3Crect x='28' y='34' width='130' height='132' rx='12' fill='%23e8eef8'/%3E%3Crect x='170' y='34' width='122' height='60' rx='12' fill='%23f2a33c'/%3E%3Crect x='170' y='106' width='122' height='60' rx='12' fill='%23c93a27'/%3E%3Crect x='48' y='58' width='72' height='10' rx='5' fill='%235a6b8c'/%3E%3Crect x='48' y='78' width='90' height='10' rx='5' fill='%235a6b8c' opacity='0.55'/%3E%3C/svg%3E" width="320" height="200" alt="热门视频封面：蓝灰拼块布局，对应数据榜单方法论视频">
+          <div>
+            <div class="gq-tag-row"><span class="gq-tag">行业观察</span><span class="gq-tag gq-tag-amber">数据</span></div>
+            <h3>轻量视频的三条曲线：完播率、收藏率与二刷率</h3>
+            <p>把 30 万次观看拆成三组维度重新看，发现二分钟以内的视频在通勤时段完播率明显更高，而收藏高峰往往出现在视频结束后的三十秒内。</p>
+            <div class="gq-meta"><span>@数据派阿澄</span><span>播放 76.2 万</span><span>点赞 <b id="gq-like-3">1.9 万</b></span></div>
+          </div>
+          <div class="gq-stream-actions">
+            <button class="gq-like" data-like-target="gq-like-3">👍 点赞</button>
+            <button class="gq-fav">☆ 收藏</button>
+            <button class="gq-play" data-copy-title="轻量视频的三条曲线：完播率、收藏率与二刷率">▶ 播放</button>
+          </div>
+        </article>
+
+        <article class="gq-stream-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23fff7ee'/%3E%3Ccircle cx='100' cy='100' r='62' fill='%23e8543f' opacity='0.16'/%3E%3Ccircle cx='100' cy='100' r='42' fill='%23e8543f'/%3E%3Cpath d='M86 80 L124 100 L86 120 Z' fill='%23fff7ee'/%3E%3Crect x='186' y='58' width='104' height='12' rx='6' fill='%2326201c' opacity='0.7'/%3E%3Crect x='186' y='84' width='84' height='10' rx='5' fill='%2326201c' opacity='0.42'/%3E%3Crect x='186' y='108' width='96' height='10' rx='5' fill='%2326201c' opacity='0.28'/%3E%3C/svg%3E" width="320" height="200" alt="热门视频封面：白色底与红色播放圆，对应品牌故事影像">
+          <div>
+            <div class="gq-tag-row"><span class="gq-tag">品牌故事</span><span class="gq-tag gq-tag-leaf">正版</span></div>
+            <h3>一支五分钟短片，讲清我们为什么坚持轻量叙事</h3>
+            <p>从最早的图文聚合到今天的省流播放，吃瓜轻量版六年只做了一件事：让信息更容易被看完。短片里穿插了创作者与用户的真实访谈。</p>
+            <div class="gq-meta"><span>@品牌编辑部</span><span>播放 58.1 万</span><span>点赞 <b id="gq-like-4">1.3 万</b></span></div>
+          </div>
+          <div class="gq-stream-actions">
+            <button class="gq-like" data-like-target="gq-like-4">👍 点赞</button>
+            <button class="gq-fav">☆ 收藏</button>
+            <button class="gq-play" data-copy-title="一支五分钟短片，讲清我们为什么坚持轻量叙事">▶ 播放</button>
+          </div>
+        </article>
+
+        <article class="gq-stream-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23f2a33c' opacity='0.28'/%3E%3Crect x='30' y='120' width='70' height='50' rx='8' fill='%23e8543f'/%3E%3Crect x='110' y='92' width='70' height='78' rx='8' fill='%23c93a27'/%3E%3Crect x='190' y='64' width='70' height='106' rx='8' fill='%233f7d5c'/%3E%3Ccircle cx='58' cy='52' r='22' fill='%235a6b8c'/%3E%3C/svg%3E" width="320" height="200" alt="热门视频封面：多彩柱形与圆形，对应社区成长与生活方式主题">
+          <div>
+            <div class="gq-tag-row"><span class="gq-tag gq-tag-leaf">生活方式</span><span class="gq-tag">治愈影像</span></div>
+            <h3>把通勤路上的二十分钟，剪成一条能安静看完的视频</h3>
+            <p>没有旁白，只有地铁进站、行人脚步与雨落棚顶的声音。评论里有人说，这是本周唯一一条没有快进的视频。</p>
+            <div class="gq-meta"><span>@慢镜头小院</span><span>播放 51.7 万</span><span>点赞 <b id="gq-like-5">1.1 万</b></span></div>
+          </div>
+          <div class="gq-stream-actions">
+            <button class="gq-like" data-like-target="gq-like-5">👍 点赞</button>
+            <button class="gq-fav">☆ 收藏</button>
+            <button class="gq-play" data-copy-title="把通勤路上的二十分钟，剪成一条能安静看完的视频">▶ 播放</button>
+          </div>
+        </article>
+
+        <article class="gq-stream-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%237a4d8c' opacity='0.85'/%3E%3Crect x='40' y='46' width='240' height='108' rx='14' fill='%23f4eaf8' opacity='0.9'/%3E%3Crect x='64' y='72' width='96' height='12' rx='6' fill='%237a4d8c'/%3E%3Crect x='64' y='96' width='150' height='10' rx='5' fill='%237a4d8c' opacity='0.5'/%3E%3Crect x='64' y='120' width='122' height='10' rx='5' fill='%237a4d8c' opacity='0.34'/%3E%3C/svg%3E" width="320" height="200" alt="热门视频封面：紫色文档卡片，对应创作者访谈与幕后内容">
+          <div>
+            <div class="gq-tag-row"><span class="gq-tag">创作幕后</span><span class="gq-tag gq-tag-amber">人物访谈</span></div>
+            <h3>从选题到上线只花十四小时：一条热搜视频的幕后</h3>
+            <p>跟拍一个三人小团队的一整天：上午查证，下午写脚本，晚上配音剪辑，凌晨上线。他们把这种节奏称为稳定的轻量生产。</p>
+            <div class="gq-meta"><span>@剪辑室灯还亮</span><span>播放 64.9 万</span><span>点赞 <b id="gq-like-6">1.4 万</b></span></div>
+          </div>
+          <div class="gq-stream-actions">
+            <button class="gq-like" data-like-target="gq-like-6">👍 点赞</button>
+            <button class="gq-fav">☆ 收藏</button>
+            <button class="gq-play" data-copy-title="从选题到上线只花十四小时：一条热搜视频的幕后">▶ 播放</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 专题企划 ===== -->
+  <section class="gq-section" id="gq-topics">
+    <div class="gq-wrap">
+      <div class="gq-sec-head">
+        <div>
+          <div class="gq-sec-kicker">Series · 专题企划</div>
+          <h2>三个正在更新的官方企划</h2>
+          <p>专题是吃瓜轻量版对内容生态的长期承诺：固定主题、固定更新节奏、固定创作者阵容，让观众可以持续追更，也让品牌表达更完整。</p>
+        </div>
+      </div>
+
+      <div class="gq-topic-grid">
+        <article class="gq-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23fff7ee'/%3E%3Crect x='36' y='40' width='150' height='190' rx='10' fill='%23e8543f'/%3E%3Crect x='206' y='40' width='110' height='190' rx='10' fill='%23f2a33c'/%3E%3Crect x='336' y='40' width='108' height='190' rx='10' fill='%233f7d5c'/%3E%3Ccircle cx='111' cy='110' r='34' fill='%23fff7ee' opacity='0.85'/%3E%3C/svg%3E" width="480" height="270" alt="专题企划配图：三本并列杂志封面，对应十分钟吃瓜简讯专题">
+          <div class="gq-topic-body">
+            <span class="gq-status">每周一至周五更新</span>
+            <h3>十分钟吃瓜简讯</h3>
+            <p>把碎片信息整理成可核对的时间线，每条简讯都附信息源、节点图与反转提示，适合通勤、午休这类短时段观看。</p>
+            <ul>
+              <li>已上线 186 期，累计播放 1.4 亿次</li>
+              <li>每期结尾开放投票，观众决定下期选题</li>
+              <li>主持人设固定，出现争议标注来源</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="gq-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%233f7d5c'/%3E%3Cpath d='M0 210 Q120 150 240 196 T480 170 V270 H0 Z' fill='%23eaf4ee' opacity='0.35'/%3E%3Ccircle cx='380' cy='76' r='44' fill='%23ffd166'/%3E%3Crect x='48' y='70' width='170' height='16' rx='8' fill='%23eaf4ee' opacity='0.9'/%3E%3Crect x='48' y='102' width='120' height='11' rx='5' fill='%23eaf4ee' opacity='0.6'/%3E%3C/svg%3E" width="480" height="270" alt="专题企划配图：绿色山丘与落日，对应城市慢行记专题">
+          <div class="gq-topic-body">
+            <span class="gq-status">每周六更新</span>
+            <h3>城市慢行记</h3>
+            <p>不赶点、不打卡，以步行速度拍城市。每期选择一条街区，用一条十分钟以内的视频呈现它的清晨、午后与夜晚。</p>
+            <ul>
+              <li>已走完 24 个街区，累计步行 380 公里</li>
+              <li>与在地小店联合拍摄，不使用摆拍脚本</li>
+              <li>开放用户投稿，入选者可获得创作补贴</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="gq-topic">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%2326201c'/%3E%3Crect x='40' y='44' width='400' height='182' rx='14' fill='%23f2a33c' opacity='0.14'/%3E%3Crect x='74' y='86' width='120' height='98' rx='8' fill='%23e8543f'/%3E%3Crect x='210' y='86' width='120' height='98' rx='8' fill='%23f2a33c'/%3E%3Crect x='346' y='86' width='60' height='98' rx='8' fill='%23fff7ee' opacity='0.7'/%3E%3C/svg%3E" width="480" height="270" alt="专题企划配图：深色底与彩色方块，对应轻量剪辑课专题">
+          <div class="gq-topic-body">
+            <span class="gq-status">双周更新 · 第三季</span>
+            <h3>轻量剪辑课</h3>
+            <p>面向新创作者的实战教程专栏：从脚本结构、素材整理到省流导出，每期拆解一个具体问题，全部提供可复现的操作步骤。</p>
+            <ul>
+              <li>已更新 32 课，配套资料累计下载 18 万次</li>
+              <li>作业区长期开放，优秀作品进入官方推荐位</li>
+              <li>讲师由平台认证创作者轮值担任</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 创作者矩阵（双列简介） ===== -->
+  <section class="gq-section gq-tint" id="gq-authors">
+    <div class="gq-wrap">
+      <div class="gq-sec-head">
+        <div>
+          <div class="gq-sec-kicker">Creators · 创作者矩阵</div>
+          <h2>把真实生活拍成轻量视频的人</h2>
+          <p>他们来自不同城市与行业，共同点是坚持原创、尊重事实、愿意与社区长期相处。点击头像旁的简介按钮可以查看完整档案。</p>
+        </div>
+      </div>
+
+      <div class="gq-authors" id="gq-author-list">
+        <article class="gq-author">
+          <div class="gq-avatar gq-av-1" aria-hidden="true">周</div>
+          <div class="gq-author-main">
+            <h3>简讯老周 <span class="gq-author-role">认证创作者</span></h3>
+            <p>擅长把复杂信息压成可核对的时间线，制作《十分钟吃瓜简讯》系列。习惯在视频里保留原始截图与出处，认为清晰比热闹更重要。</p>
+            <div class="gq-author-data"><span>作品 <b>212</b></span><span>粉丝 <b>186.4 万</b></span><span>领域 <b>行业观察</b></span></div>
+            <button class="gq-author-more" data-author="简讯老周">查看完整档案</button>
+          </div>
+        </article>
+
+        <article class="gq-author">
+          <div class="gq-avatar gq-av-2" aria-hidden="true">满</div>
+          <div class="gq-author-main">
+            <h3>山野小满 <span class="gq-author-role">城市影像</span></h3>
+            <p>在县城生活，也在县城创作。用一年时间拍下菜场、车站与河堤的四季，擅长用环境声代替旁白，让画面自己把情绪讲完。</p>
+            <div class="gq-author-data"><span>作品 <b>148</b></span><span>粉丝 <b>92.7 万</b></span><span>领域 <b>城市探索</b></span></div>
+            <button class="gq-author-more" data-author="山野小满">查看完整档案</button>
+          </div>
+        </article>
+
+        <article class="gq-author">
+          <div class="gq-avatar gq-av-3" aria-hidden="true">澄</div>
+          <div class="gq-author-main">
+            <h3>数据派阿澄 <span class="gq-author-role">内容研究</span></h3>
+            <p>前数据分析师，现全职做视频。每期从一个具体数据问题出发，用图表和实拍交叉验证，习惯在评论区公开原始数据口径。</p>
+            <div class="gq-author-data"><span>作品 <b>96</b></span><span>粉丝 <b>74.3 万</b></span><span>领域 <b>数据榜单</b></span></div>
+            <button class="gq-author-more" data-author="数据派阿澄">查看完整档案</button>
+          </div>
+        </article>
+
+        <article class="gq-author">
+          <div class="gq-avatar gq-av-4" aria-hidden="true">鹿</div>
+          <div class="gq-author-main">
+            <h3>设置控小鹿 <span class="gq-author-role">实用技巧</span></h3>
+            <p>专注软件与设备的实用设置，喜欢把说明书里看不懂的步骤拍成三分钟视频。所有教程都在真机上演示，拒绝只讲概念。</p>
+            <div class="gq-author-data"><span>作品 <b>176</b></span><span>粉丝 <b>68.1 万</b></span><span>领域 <b>教程干货</b></span></div>
+            <button class="gq-author-more" data-author="设置控小鹿">查看完整档案</button>
+          </div>
+        </article>
+
+        <article class="gq-author">
+          <div class="gq-avatar gq-av-5" aria-hidden="true">灯</div>
+          <div class="gq-author-main">
+            <h3>剪辑室灯还亮 <span class="gq-author-role">幕后记录</span></h3>
+            <p>三人小团队的共用账号。记录一条视频从选题到上线的完整过程，也记录下那些被删掉的片段和没说出口的犹豫。</p>
+            <div class="gq-author-data"><span>作品 <b>84</b></span><span>粉丝 <b>53.6 万</b></span><span>领域 <b>创作幕后</b></span></div>
+            <button class="gq-author-more" data-author="剪辑室灯还亮">查看完整档案</button>
+          </div>
+        </article>
+
+        <article class="gq-author">
+          <div class="gq-avatar gq-av-6" aria-hidden="true">院</div>
+          <div class="gq-author-main">
+            <h3>慢镜头小院 <span class="gq-author-role">治愈影像</span></h3>
+            <p>拍猫、拍雨、拍楼下的树。视频节奏很慢，但每一条都能让人安静看完。她相信镜头不必一直往前跑，也可以停在原地。</p>
+            <div class="gq-author-data"><span>作品 <b>132</b></span><span>粉丝 <b>45.9 万</b></span><span>领域 <b>生活方式</b></span></div>
+            <button class="gq-author-more" data-author="慢镜头小院">查看完整档案</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 品牌解析长文 ===== -->
+  <section class="gq-section" id="gq-article">
+    <div class="gq-wrap">
+      <article class="gq-article">
+        <div class="gq-sec-kicker">Deep Dive · 关键词解析</div>
+        <h2>吃瓜轻量版：轻量视频如何成为一种可信的内容方式</h2>
+        <p>「吃瓜」原本是一种围观心态，而「轻量版」为它加上了边界：在有限的时间里，用尽可能低的注意力成本，把一件事看清楚。这个组合词，正是本品牌六年内容实践的出发点。作为一家持续运营的视频品牌，吃瓜轻量版官方网站并不只是播放页面的集合，它更接近一个长期运转的内容社区：有稳定的选题标准、公开的数据口径、可追溯的创作者档案，也有愿意反复回来的观众。</p>
+
+        <h3>一、轻量不是删减，而是重新组织信息的顺序</h3>
+        <p>很多人第一次听到吃瓜轻量版，会以为它只是把长视频剪短。实际恰好相反：轻量指的是在固定时间内提高信息密度，而删除的往往是重复表达。以《十分钟吃瓜简讯》为例，一条视频必须在开场四十秒内交代事件轮廓，在两分钟左右给出关键节点，并在结尾保留三处来源标注。观众如果只想了解结论，可以只看前两分钟；如果想核对细节，可以顺着标注回到原始信息。这种分层结构让同一条内容可以服务不同深度的观看需求。</p>
+        <p>在制作流程上，编辑部把「查证」放在「表达」之前。每条涉及公共讨论的视频至少需要两个独立信源，若只有单一来源，必须在画面中注明。我们并不追求抢在所有人前面发，而是追求在发布之后不需要反复修改。对品牌来说，这种克制是一种长期投入；对观众来说，它意味着点开吃瓜轻量版时的默认信任。</p>
+
+        <h3>二、省流、高清与流畅，是社区体验的地基</h3>
+        <p>轻量视频的主要观看场景在移动端，且大量集中在通勤、排队与睡前这些碎片时段。因此吃瓜轻量版在播放器层面做了大量并不显眼的工作：默认开启省流模式，同时提供四档清晰度切换；预加载只保留接下来约三十秒的内容，避免占用过多存储空间；在弱网环境下自动降低码率但保留字幕与关键画面，保证叙事不断裂。这些细节不会出现在宣传语里，却直接决定用户是否愿意长期留下。</p>
+        <p>根据平台内部的播放质量统计，启用省流模式后，同清晰度下的平均流量消耗下降约 38%，而完播率反而略有上升。原因并不复杂：当观众不必担心流量成本，观看行为会更放松，也更愿意把视频看完。这也是我们坚持把「轻量」写入品牌名的原因——它不是营销词汇，而是产品与内容共同遵守的原则。</p>
+
+        <h3>三、创作者生态：让真实的人获得稳定的表达空间</h3>
+        <p>一个视频社区的生命力，最终取决于创作者能否持续产出。吃瓜轻量版对创作者的支持分为三层：第一层是工具，包括脚本模板、素材管理、批量上传与下载、数据看板；第二层是流量，官方专题会为垂直领域创作者保留固定席位，避免流量全部集中在少数账号；第三层是收入与成长，包括创作补贴、品牌合作对接与年度原创影像计划。我们不鼓励为了热点而放弃自己的表达方式，也反对用夸张标题换取点击。</p>
+        <p>目前平台认证创作者超过 2900 位，覆盖城市探索、实用技巧、人物访谈、生活方式、数据观察等十余个方向。社区里既有粉丝百万的成熟团队，也有刚开始更新的个人创作者。为了让新人被看见，我们设立了新人榜与口碑榜，评审标准包括内容真实性、信息完整度与评论互动质量，而不是单纯播放量。这种机制让内容生态保持多元与包容，也让「值得信赖」不只是一句口号。</p>
+
+        <h3>四、社区温度：评论区的分寸感同样是品牌资产</h3>
+        <p>吃瓜轻量版的评论区设有一条简单规则：可以质疑内容，但不攻击个人。为此平台提供了事实核对标记、来源补充入口与举报反馈通道。当一条评论指出视频中的事实错误，创作者可以在后台查看并在下一条视频中更正，更正记录会公开展示。我们相信，承认错误的成本远低于失去信任的成本。</p>
+        <p>另一方面，社区也需要温度。每年我们会在固定时间发起「年度真实影像」征集，鼓励用户上传那些没有流量却值得被记住的片段：一次搬家、一场雨、一只猫的午后。入选作品会出现在官方网站的专题页，并获得创作补贴。这些内容往往没有惊人的数据，却构成了社区最稳定的情感基础，也让品牌在快速变化的内容行业里保有自己的节奏。</p>
+        <div class="gq-quote-box">对企业合作方而言，吃瓜轻量版提供的不只是曝光位，而是一套可被验证的内容方案：清晰的受众画像、可追溯的播放数据、稳定的更新节奏，以及愿意认真看完的观众。</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== 评价（双列短评） ===== -->
+  <section class="gq-section gq-tint" id="gq-reviews">
+    <div class="gq-wrap">
+      <div class="gq-sec-head">
+        <div>
+          <div class="gq-sec-kicker">Voice · 社区口碑</div>
+          <h2>观众与创作者怎么说</h2>
+          <p>以下评价来自吃瓜轻量版社区的真实反馈，涵盖观看体验、创作工具与内容质量三个维度，未做统一润色。</p>
+        </div>
+      </div>
+
+      <div class="gq-reviews">
+        <article class="gq-review">
+          <div class="gq-review-stars" aria-label="五星评价">★★★★★</div>
+          <p>通勤路上最怕视频加载转圈，这里基本点开就能看。省流模式对流量党太友好了，一个月下来流量账单明显少了。</p>
+          <div class="gq-review-by"><span class="gq-avatar gq-av-2" aria-hidden="true">李</span><div><b>李同学</b><br>学生 · 使用 11 个月</div></div>
+        </article>
+
+        <article class="gq-review">
+          <div class="gq-review-stars" aria-label="四星评价">★★★★☆</div>
+          <p>喜欢简讯系列的结构，时间线很清楚。唯一希望的是能多做一些长一点的深度内容，有些话题十分钟确实不够。</p>
+          <div class="gq-review-by"><span class="gq-avatar gq-av-3" aria-hidden="true">陈</span><div><b>陈女士</b><br>编辑 · 使用 2 年</div></div>
+        </article>
+
+        <article class="gq-review">
+          <div class="gq-review-stars" aria-label="五星评价">★★★★★</div>
+          <p>作为创作者最直观的感受是后台好用，上传和下载都很快，数据看板能看到完播曲线，改下一条脚本时心里有数多了。</p>
+          <div class="gq-review-by"><span class="gq-avatar gq-av-1" aria-hidden="true">王</span><div><b>王先生</b><br>认证创作者 · 使用 3 年</div></div>
+        </article>
+
+        <article class="gq-review">
+          <div class="gq-review-stars" aria-label="四星评价">★★★★☆</div>
+          <p>评论区氛围比较克制，很少看到互相攻击。偶尔有观点冲突，但大家还是在讨论事情本身，这点挺难得。</p>
+          <div class="gq-review-by"><span class="gq-avatar gq-av-4" aria-hidden="true">赵</span><div><b>赵同学</b><br>产品经理 · 使用 8 个月</div></div>
+        </article>
+
+        <article class="gq-review">
+          <div class="gq-review-stars" aria-label="五星评价">★★★★★</div>
+          <p>城市慢行记我每期都看，特别喜欢没有旁白的处理。看的时候会觉得这座城市其实还有另一面，只是平时走太快了。</p>
+          <div class="gq-review-by"><span class="gq-avatar gq-av-6" aria-hidden="true">周</span><div><b>周老师</b><br>中学教师 · 使用 1 年</div></div>
+        </article>
+
+        <article class="gq-review">
+          <div class="gq-review-stars" aria-label="三星评价">★★★☆☆</div>
+          <p>内容整体不错，但搜索有时找不到想看的旧视频，希望关键词匹配能再准一点，标题里带同义词也能搜到。</p>
+          <div class="gq-review-by"><span class="gq-avatar gq-av-5" aria-hidden="true">吴</span><div><b>吴同学</b><br>自由职业 · 使用 6 个月</div></div>
+        </article>
+
+        <article class="gq-review">
+          <div class="gq-review-stars" aria-label="五星评价">★★★★★</div>
+          <p>我们品牌和吃瓜轻量版合作过一次专题，从脚本沟通到上线只用了两周，数据回传很及时，过程比想象中顺畅。</p>
+          <div class="gq-review-by"><span class="gq-avatar gq-av-2" aria-hidden="true">林</span><div><b>林女士</b><br>品牌合作方 · 合作 4 次</div></div>
+        </article>
+
+        <article class="gq-review">
+          <div class="gq-review-stars" aria-label="四星评价">★★★★☆</div>
+          <p>剪辑课的资料包很实用，尤其是素材整理那一课。提个小建议：希望能出配套的字幕样式模板下载。</p>
+          <div class="gq-review-by"><span class="gq-avatar gq-av-3" aria-hidden="true">何</span><div><b>何同学</b><br>新人创作者 · 使用 4 个月</div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 企业动态 + 合作墙 ===== -->
+  <section class="gq-section" id="gq-news">
+    <div class="gq-wrap">
+      <div class="gq-sec-head">
+        <div>
+          <div class="gq-sec-kicker">Updates · 企业动态</div>
+          <h2>品牌最近在做什么</h2>
+          <p>官方发布的产品进展、合作与内容计划，同步更新于官方网站与合作方渠道，欢迎持续关注。</p>
+        </div>
+      </div>
+
+      <div class="gq-news">
+        <article class="gq-news-card">
+          <div class="gq-news-date">2026.11.18</div>
+          <h3>4.2 版本上线：播放器省流模式再优化</h3>
+          <p>新增按网络状态自动切换清晰度、后台播放进度保留与下载任务批量管理，弱网环境下的首帧加载时间平均缩短 0.6 秒。</p>
+        </article>
+        <article class="gq-news-card">
+          <div class="gq-news-date">2026.11.10</div>
+          <h3>第十二期原创影像计划开启报名</h3>
+          <p>本期主题为「身边三公里」，面向所有注册创作者开放，入选者将获得创作补贴与官方专题推荐位，报名截止 11 月 30 日。</p>
+        </article>
+        <article class="gq-news-card">
+          <div class="gq-news-date">2026.10.29</div>
+          <h3>与四家在地文化机构达成内容合作</h3>
+          <p>围绕城市街区纪录、地方手工艺与公共文化空间展开联合拍摄，首批合作视频将于十二月在专题页陆续上线。</p>
+        </article>
+      </div>
+
+      <div style="margin-top:38px">
+        <h3 style="font-size:19px;margin-bottom:16px">合作品牌与伙伴</h3>
+        <div class="gq-partners">
+          <div class="gq-partner">青禾影像<span>内容联合出品</span></div>
+          <div class="gq-partner">格子书店<span>城市慢行记支持</span></div>
+          <div class="gq-partner">北岸录音棚<span>声音制作合作</span></div>
+          <div class="gq-partner">慢坡咖啡<span>线下放映空间</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 投稿 CTA ===== -->
+  <section class="gq-section" style="padding-top:0" id="gq-submit">
+    <div class="gq-wrap">
+      <div class="gq-cta">
+        <div>
+          <h2>把你身边的真实拍下来，交给社区</h2>
+          <p>吃瓜轻量版常年开放投稿与上传入口。无论是三分钟的生活记录，还是十分钟的深度观察，只要真实、清晰、尊重事实，我们都愿意给它一个稳定的展示位置。</p>
+        </div>
+        <div class="gq-cta-actions">
+          <button class="gq-btn gq-btn-primary" id="gq-submit-cta">立即投稿</button>
+          <button class="gq-btn gq-btn-ghost" id="gq-share-btn">分享官方网站</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="gq-section gq-tint" id="gq-faq">
+    <div class="gq-wrap">
+      <div class="gq-sec-head">
+        <div>
+          <div class="gq-sec-kicker">Help · 帮助中心</div>
+          <h2>关于吃瓜轻量版的常见问题</h2>
+          <p>点击问题展开答案。若仍未解决，可通过页面底部的联系渠道向官方反馈。</p>
+        </div>
+      </div>
+
+      <div class="gq-faq">
+        <details>
+          <summary>吃瓜轻量版和普通视频平台有什么区别？</summary>
+          <p>吃瓜轻量版聚焦短时长、高信息密度的原创与正版授权内容，默认开启省流播放，弱网环境下优先保证叙事完整。我们不做无限下拉的沉浸流，而是以专题、栏目和创作者档案组织内容，帮助观众在碎片时间里把一件事看清楚。</p>
+        </details>
+        <details>
+          <summary>如何上传作品，需要什么条件？</summary>
+          <p>注册账号并完成实名认证后，即可在创作者后台发起上传。作品需为原创或已取得授权，时长建议控制在 15 分钟以内，画面清晰度不低于 720P。上传后会有一次内容审核，通常在一个工作日内完成。</p>
+        </details>
+        <details>
+          <summary>省流模式会影响画质吗？</summary>
+          <p>省流模式通过优化编码与预加载策略降低流量消耗，在同等清晰度下画质基本不受影响。你可以在播放器中手动切换清晰度；在 Wi-Fi 环境下，系统默认使用更高码率以获得更好的观看效果。</p>
+        </details>
+        <details>
+          <summary>专题企划可以投稿吗？</summary>
+          <p>可以。每期专题页底部均设有投稿入口，注明擅长的方向与过往作品链接即可。专题席位有限，我们会优先选择长期稳定更新、内容真实可核对的创作者。</p>
+        </details>
+        <details>
+          <summary>视频下载后可以二次使用吗？</summary>
+          <p>平台提供官方下载功能，但内容版权归创作者或授权方所有。商业用途需取得书面授权，非商业分享请保留来源与创作者信息。对侵权内容，官方设有举报通道并会及时处理。</p>
+        </details>
+        <details>
+          <summary>品牌合作如何联系？</summary>
+          <p>可在页面底部「商务合作」邮箱提交需求简报，说明合作目标、预算区间与期望上线时间。我们通常在三个工作日内回复，并给出内容方案与可选资源位建议。</p>
+        </details>
+        <details>
+          <summary>遇到事实错误的视频该怎么反馈？</summary>
+          <p>在视频播放页点击反馈按钮，选择「事实核对」类别并附上可查来源。官方会转交创作者复核，若确认存在错误，将在下一条相关内容中公开更正，并在该视频简介中补充说明。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer class="gq-footer">
+  <div class="gq-wrap">
+    <div class="gq-footer-grid">
+      <div>
+        <div class="gq-foot-logo"><span class="gq-logo-mark" aria-hidden="true">瓜</span>吃瓜轻量版</div>
+        <p>吃瓜轻量版官方网站，专注轻量、高清、原创的短视频内容社区。我们以专业的内容标准与持续的社区运营，为创作者与观众搭建值得信赖的内容生态。</p>
+        <div class="gq-foot-badges" style="margin-top:14px">
+          <span>原创内容</span><span>正版授权</span><span>持续运营</span>
+        </div>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul>
+          <li><a href="#gq-focus">焦点推荐</a></li>
+          <li><a href="#gq-stream">热门视频</a></li>
+          <li><a href="#gq-topics">专题企划</a></li>
+          <li><a href="#gq-authors">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关于平台</h3>
+        <ul>
+          <li><a href="#gq-article">品牌解析</a></li>
+          <li><a href="#gq-reviews">社区口碑</a></li>
+          <li><a href="#gq-news">企业动态</a></li>
+          <li><a href="#gq-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>联系与投稿</h3>
+        <p>投稿邮箱：creator@chigua-light.example</p>
+        <p>商务合作：brand@chigua-light.example</p>
+        <p>工作时间：周一至周五 10:00–19:00</p>
+        <button class="gq-btn gq-btn-primary" id="gq-foot-submit" style="margin-top:10px">在线投稿</button>
+      </div>
+    </div>
+    <div class="gq-foot-bottom">
+      <span>© 2026 吃瓜轻量版官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容许可证：网文（示例）第 2026-0118 号 · 备案号（示例）新备案 20260118 号</span>
+    </div>
+  </div>
+</footer>
+
+<button class="gq-top" id="gq-top-btn" aria-label="回到顶部">↑</button>
+<div class="gq-toast" id="gq-toast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗 -->
+<div class="gq-modal" id="gq-modal" role="dialog" aria-modal="true" aria-labelledby="gq-modal-title">
+  <div class="gq-modal-box">
+    <button class="gq-modal-close" id="gq-modal-close" aria-label="关闭弹窗">✕</button>
+    <h3 id="gq-modal-title">标题</h3>
+    <div id="gq-modal-body"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Toast ---------- */
+  var toastEl = document.getElementById('gq-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('gq-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('gq-on'); }, 2200);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var navToggle = document.getElementById('gq-nav-toggle');
+  var nav = document.getElementById('gq-nav');
+  navToggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('gq-open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.textContent = open ? '✕' : '☰';
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(nav.classList.contains('gq-open')){
+        nav.classList.remove('gq-open');
+        navToggle.setAttribute('aria-expanded','false');
+        navToggle.textContent = '☰';
+      }
+    });
+  });
+
+  /* ---------- 搜索提示 ---------- */
+  var searchInput = document.getElementById('gq-search-input');
+  var searchHint = document.getElementById('gq-search-hint');
+  var searchBtn = document.getElementById('gq-search-btn');
+  var searchPool = [
+    '十分钟吃瓜简讯','省流播放设置','城市慢行记','轻量剪辑课','山野小满','数据派阿澄',
+    '人物访谈','创作幕后','原创影像计划','投稿入口','新人榜','品牌故事'
+  ];
+  function runSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchHint.innerHTML = '试试搜索：<b>吃瓜简讯</b> / <b>城市慢行记</b> / <b>省流</b>';
+      searchHint.classList.add('gq-on');
+      return;
+    }
+    var hits = searchPool.filter(function(item){
+      return item.indexOf(q) !== -1 || q.indexOf(item) !== -1;
+    });
+    if(hits.length){
+      searchHint.innerHTML = '找到 <b>' + hits.length + '</b> 条相关内容：' + hits.slice(0,4).join('、') + (hits.length>4?' 等':'');
+    }else{
+      searchHint.innerHTML = '未找到「' + q.replace(/[<>&"]/g,'') + '」的直接匹配，试试 <b>简讯</b> 或 <b>省流</b>';
+    }
+    searchHint.classList.add('gq-on');
+  }
+  searchBtn.addEventListener('click', runSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+  });
+  searchInput.addEventListener('focus', function(){
+    if(!searchHint.textContent){
+      searchHint.innerHTML = '热门搜索：<b>十分钟吃瓜简讯</b>、<b>城市慢行记</b>、<b>轻量剪辑课</b>';
+    }
+    searchHint.classList.add('gq-on');
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.gq-search')) searchHint.classList.remove('gq-on');
+  });
+
+  /* ---------- 点赞 +1/-1 ---------- */
+  document.querySelectorAll('.gq-like').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var targetId = btn.getAttribute('data-like-target');
+      var target = document.getElementById(targetId);
+      var liked = btn.classList.toggle('gq-liked');
+      if(target){
+        var txt = target.textContent.replace(/[^\d.]/g,'');
+        var num = parseFloat(txt) || 0;
+        var unit = target.textContent.indexOf('万') !== -1 ? '万' : '';
+        num = liked ? (num + 0.1) : (num - 0.1);
+        if(num < 0) num = 0;
+        target.textContent = (unit ? num.toFixed(1) : Math.round(num)) + unit;
+      }
+      btn.textContent = liked ? '👍 已点赞' : '👍 点赞';
+      showToast(liked ? '已点赞，感谢你的支持' : '已取消点赞');
+    });
+  });
+
+  /* ---------- 收藏切换 ---------- */
+  document.querySelectorAll('.gq-fav').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var faved = btn.classList.toggle('gq-faved');
+      btn.textContent = faved ? '♥ 已收藏' : '☆ 收藏';
+      showToast(faved ? '已加入收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 复制链接 / 播放提示 ---------- */
+  document.querySelectorAll('.gq-play').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var title = btn.getAttribute('data-copy-title') || '吃瓜轻量版视频';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(title).then(function(){
+          showToast('视频标题已复制，可粘贴分享');
+        }).catch(function(){
+          showToast('已准备播放：' + title.slice(0, 16) + '…');
+        });
+      }else{
+        showToast('已准备播放：' + title.slice(0, 16) + '…');
+      }
+    });
+  });
+
+  /* ---------- 弹窗工具 ---------- */
+  var modal = document.getElementById('gq-modal');
+  var modalTitle = document.getElementById('gq-modal-title');
+  var modalBody = document.getElementById('gq-modal-body');
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.classList.add('gq-on');
+  }
+  function closeModal(){
+    modal.classList.remove('gq-on');
+    modalBody.innerHTML = '';
+  }
+  document.getElementById('gq-modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){
+    if(e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+
+  /* ---------- 作者档案弹窗 ---------- */
+  var authorData = {
+    '简讯老周': {role:'认证创作者 · 行业观察', works:'212', fans:'186.4 万', desc:'做过七年纸媒编辑，2021 年开始用视频梳理公共讨论。制作《十分钟吃瓜简讯》系列，坚持每条视频标注信源，反对用情绪替代事实。'},
+    '山野小满': {role:'认证创作者 · 城市探索', works:'148', fans:'92.7 万', desc:'生活在南方县城，拍菜场、车站、河堤和四季。喜欢保留环境声，很少使用旁白。认为记录普通人的日常，本身就是一种有价值的表达。'},
+    '数据派阿澄': {role:'认证创作者 · 内容研究', works:'96', fans:'74.3 万', desc:'前数据分析师，现全职创作。擅长把复杂数据讲成普通观众能听懂的故事，每条视频都会公开数据口径与样本范围，接受评论区质询。'},
+    '设置控小鹿': {role:'认证创作者 · 实用技巧', works:'176', fans:'68.1 万', desc:'专注软件与设备的实用设置，所有教程均在真机上完成演示。视频结构固定：问题、步骤、实测结果，三步讲完，不拖时间。'},
+    '剪辑室灯还亮': {role:'认证创作者 · 创作幕后', works:'84', fans:'53.6 万', desc:'三人小团队共用账号，记录一条视频从选题到上线的全过程。也会公开被删掉的片段和失败尝试，希望让创作不再神秘。'},
+    '慢镜头小院': {role:'认证创作者 · 生活方式', works:'132', fans:'45.9 万', desc:'拍猫、拍雨、拍楼下的树。视频节奏很慢，但每条都能让人安静看完。相信镜头不必一直往前跑，也可以停在原地看看。'}
+  };
+  document.querySelectorAll('.gq-author-more').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-author');
+      var d = authorData[name] || {};
+      openModal(name + ' · 创作者档案',
+        '<p><strong>领域：</strong>' + (d.role || '—') + '</p>' +
+        '<p><strong>作品数：</strong>' + (d.works || '—') + '　<strong>粉丝：</strong>' + (d.fans || '—') + '</p>' +
+        '<p>' + (d.desc || '') + '</p>' +
+        '<p style="color:#8a7a6e">该创作者长期在吃瓜轻量版更新原创内容，作品可在热门视频与专题页查看。</p>'
+      );
+    });
+  });
+
+  /* ---------- 投稿弹窗 ---------- */
+  var submitHtml =
+    '<p>填写基本信息，内容团队会在三个工作日内与你联系。</p>' +
+    '<div class="gq-field"><label for="gq-f-name">称呼</label><input id="gq-f-name" type="text" placeholder="怎么称呼你"></div>' +
+    '<div class="gq-field"><label for="gq-f-contact">联系方式</label><input id="gq-f-contact" type="text" placeholder="邮箱或社交账号"></div>' +
+    '<div class="gq-field"><label for="gq-f-topic">作品方向</label><input id="gq-f-topic" type="text" placeholder="例如：城市探索 / 实用技巧"></div>' +
+    '<div class="gq-field"><label for="gq-f-note">补充说明</label><textarea id="gq-f-note" rows="3" placeholder="简要介绍你的作品与更新计划"></textarea></div>' +
+    '<button class="gq-btn gq-btn-primary" id="gq-f-send" style="width:100%">提交投稿意向</button>';
+  function openSubmit(){
+    openModal('投稿入口', submitHtml);
+    var send = document.getElementById('gq-f-send');
+    if(send){
+      send.addEventListener('click', function(){
+        var name = (document.getElementById('gq-f-name').value || '').trim();
+        if(!name){
+          showToast('请先填写称呼');
+          return;
+        }
+        closeModal();
+        showToast('投稿意向已记录，感谢你的参与');
+      });
+    }
+  }
+  document.getElementById('gq-submit-btn').addEventListener('click', openSubmit);
+  document.getElementById('gq-submit-cta').addEventListener('click', openSubmit);
+  document.getElementById('gq-foot-submit').addEventListener('click', openSubmit);
+
+  /* ---------- 分享弹窗 ---------- */
+  document.getElementById('gq-share-btn').addEventListener('click', function(){
+    openModal('分享吃瓜轻量版官方网站',
+      '<p>选择一种方式，把官方网站分享给朋友：</p>' +
+      '<div class="gq-feed-list">' +
+        '<button class="gq-feed-opt gq-share-opt" data-share="微信">微信好友</button>' +
+        '<button class="gq-feed-opt gq-share-opt" data-share="微博">微博</button>' +
+        '<button class="gq-feed-opt gq-share-opt" data-share="QQ">QQ</button>' +
+      '</div>' +
+      '<button class="gq-btn gq-btn-ghost" id="gq-copy-link" style="width:100%">复制页面链接</button>'
+    );
+    document.querySelectorAll('.gq-share-opt').forEach(function(b){
+      b.addEventListener('click', function(){
+        closeModal();
+        showToast('已生成分享卡片：' + b.getAttribute('data-share'));
+      });
+    });
+    var copyBtn = document.getElementById('gq-copy-link');
+    copyBtn.addEventListener('click', function(){
+      var link = window.location.href;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){
+          closeModal();
+          showToast('链接已复制，可粘贴分享');
+        }).catch(function(){
+          closeModal();
+          showToast('复制失败，请手动复制地址栏');
+        });
+      }else{
+        closeModal();
+        showToast('当前浏览器不支持自动复制');
+      }
+    });
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('gq-top-btn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 480){
+      topBtn.classList.add('gq-on');
+    }else{
+      topBtn.classList.remove('gq-on');
+    }
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+    </html>
